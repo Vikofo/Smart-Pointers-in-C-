@@ -1,0 +1,17 @@
+#include <iostream>
+#include <memory>
+
+class MyClass {
+public:
+    void display() {
+        std::cout << "Hello from MyClass!" << std::endl;
+    }
+};
+
+int main() {
+    std::shared_ptr<MyClass> ptr = std::make_shared<MyClass>();
+    ptr->display();
+
+    // Automatically managed memory deallocation
+    return 0;
+}
